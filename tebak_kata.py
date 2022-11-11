@@ -44,7 +44,7 @@ def recognize_speech_from_mic(recognizer, microphone):
 
 if __name__ == "__main__":
     # set the list of words, maxnumber of guesses, and prompt limit
-    WORDS = ["penggaris", "pasir", "batu"]
+    WORDS = ["universitas", "sekolah", "asrama"]
     NUM_GUESSES = 3
     PROMPT_LIMIT = 5
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
                 break
             if not guess["success"]:
                 break
-            print("I didn't catch that. What did you say?\n")
+            print("coba ulang lagi?\n")
 
         # if there was an error, stop the game
         if guess["error"]:
@@ -100,7 +100,7 @@ if __name__ == "__main__":
         # if not, repeat the loop if user has more attempts
         # if no attempts left, the user loses the game
         if guess_is_correct:
-            print("Hooray!!! \nSelamat anda menang!".format(word))
+            print("Hore !!! \nSelamat anda menang!".format(word))
             break
         elif user_has_more_attempts:
             print("Coba lagi\n ")
